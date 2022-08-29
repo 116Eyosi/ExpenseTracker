@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:one/page1.dart';
+import 'LogIn.dart';
 
 
 
@@ -24,6 +26,9 @@ class _SignUpState extends State<SignUp> {
             IconButton(
             icon: const Icon(Icons.arrow_back_outlined),
     onPressed: () {
+      Navigator.pop(context,
+            MaterialPageRoute(builder: (context) => page1()),
+      );
     }),
           Center(
             child: Text('Sign Up',
@@ -99,6 +104,7 @@ class _SignUpState extends State<SignUp> {
         child:
         FloatingActionButton.extended(
           backgroundColor: Colors.purple[800],
+          elevation: 0.0,
           onPressed: (){},
           label: Text('Sign Up',
           style: TextStyle(
@@ -122,6 +128,7 @@ class _SignUpState extends State<SignUp> {
             child:
             FloatingActionButton.extended(
               backgroundColor: Colors.white,
+              elevation: 0.0,
               onPressed: (){},
               label:
               Text('Sign Up with Google ',
@@ -134,6 +141,28 @@ class _SignUpState extends State<SignUp> {
               ),
             ),
           ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(70.0, 0.0, 10.0, 0.0),
+            child: Row(
+              children: [
+                Text('Already have an account?',
+                style: TextStyle(
+                  fontSize: 15.0,
+                ),),
+                TextButton(onPressed: (){
+                  Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => LogIn()),
+                  );
+                },
+                    child: Text('Login',
+                      style: TextStyle(
+                        fontSize: 15.0
+                      ),
+                    ))
+
+              ],
+            ),
+          )
         ]
       )
     );
