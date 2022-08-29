@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:one/page1.dart';
-import 'LogIn.dart';
+import '../LogIn/LogIn.dart';
 
 
 

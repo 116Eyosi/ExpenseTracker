@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'LogIn.dart';
-
+import 'AccessPage.dart';
 class ForgotPass extends StatefulWidget {
   const ForgotPass({Key? key}) : super(key: key);
 
@@ -45,7 +45,11 @@ class _ForgotPassState extends State<ForgotPass> {
           FloatingActionButton.extended(
               backgroundColor: Colors.purple[800],
               elevation: 0.0,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, 
+                MaterialPageRoute(builder: (context) => Access())
+                );
+              },
               label: Text('Continue',
               style: TextStyle(
                 fontSize: 30.0

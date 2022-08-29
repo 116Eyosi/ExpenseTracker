@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'SignUp.dart';
+import '../SignUp/SignUp.dart';
 import 'ForgotPassword.dart';
 
 class LogIn extends StatefulWidget {
